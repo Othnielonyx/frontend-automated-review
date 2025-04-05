@@ -63,7 +63,11 @@ export default function App() {
               <h2 className="text-lg font-semibold flex items-center gap-2">
                 <FileText className="w-5 h-5" /> Analysis Report
               </h2>
-              <pre className="text-sm text-gray-700 mt-2 overflow-x-auto">{result}</pre>
+              <ul className="text-sm text-gray-700 mt-2 list-disc pl-5">
+                {result.map((msg, index) => (
+                  <li key={index}>{msg}</li>
+                ))}
+              </ul>
             </div>
           )}
         </CardContent>
@@ -71,4 +75,3 @@ export default function App() {
     </div>
   );
 }
-
